@@ -67,12 +67,12 @@ fun passwordChecking(password: String): String {
         println("not valid")
         }
     else {
-//            if(password.contains(1..100)){
-//                println("valid")
-//            }
-//
-//            else{
-//                return("true")
+            if(password.contains(1..100)){
+                println("valid")
+            }
+
+            else{
+                return("true")
             }
     }
 
