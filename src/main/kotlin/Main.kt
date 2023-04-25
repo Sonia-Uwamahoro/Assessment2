@@ -1,7 +1,10 @@
+@file:Suppress("UNREACHABLE_CODE")
+
 fun main(args: Array<String>) {
-//    println(colorString("blue"))
-//    var passCheck = passwordChecking("123abc")
-//    println(passCheck)
+    var colorstr = colorString("blue")
+    println(colorstr)
+    var passCheck = passwordChecking("123abc")
+    println(passCheck)
     multiples()
 
 
@@ -10,6 +13,8 @@ fun main(args: Array<String>) {
     currentAcc.widrawAmount(7362.1)
     currentAcc.details()
 
+    val savingAcc = SavingAccount(3645372,"Moreen Vi", 647393.29, 10)
+    savingAcc.widraws()
 }
 
 // 1
@@ -17,30 +22,28 @@ fun main(args: Array<String>) {
 //following values: first character, last character, length of the string and
 //whether it begins with a vowel or not.
 
-//fun colorString(color: String): Char{
+ fun colorString(color: String): Any {
 
-    // first char
-//    return (color[0])
+//     first char
+    return ("$color[0], $color[-1]")
 
-//    // last char
-//    return (color[-1])
-//
-//    // length
-//    return (color.length)
-//
-//
-//    // Length of the string
-//    for(i in color.length - 1){
-//        val character = color[i]
-//        if (character == 'a' || character == 'e' || character == 'i' || character == 'u' || character == 'o' ){
-//            println("It starts with vowel")
-//        }
-//        else{
-//            println("it doesnt start with vowel")
-//        }
-//    }
-//
-//
+    // length
+    return color.length
+
+     // Length of the string
+     for(i in color.length - 1){
+         val character = color[i]
+         if (character == 'a' || character == 'e' || character == 'i' || character == 'u' || character == 'o' ){
+             println("It starts with vowel")
+         }
+         else{
+             println("it doesnt start with vowel")
+         }
+     }
+
+
+ }
+
 
 
 // 2.
@@ -53,27 +56,27 @@ fun main(args: Array<String>) {
 //Your function should determine whether the password provided is valid or not.
 //The function returns true/false
 
-//fun passwordChecking(password: String): String {
-//        if (password. length == 8){
-//            println("valid")
-//        }
-//    else if(password.length != 16){
-//        println("not valid")
-//        }
-//    else if(password != "password"){
-//        println("not valid")
-//        }
-//    else {
-////            if(password.contains(1..100)){
-////                println("valid")
-////            }
-////
-////            else{
-////                return("true")
+fun passwordChecking(password: String): String {
+        if (password. length == 8){
+            println("valid")
+        }
+    else if(password.length != 16){
+        println("not valid")
+        }
+    else if(password != "password"){
+        println("not valid")
+        }
+    else {
+//            if(password.contains(1..100)){
+//                println("valid")
 //            }
-//    }
 //
-//}
+//            else{
+//                return("true")
+            }
+    }
+
+}
 
 
 
@@ -140,6 +143,12 @@ open class CurrentAccount(var accountNumber: Int, var accountName: String, var b
 
 class SavingAccount(accountNumber: Int, accountName: String, balance: Double, var withdrawals: Int): CurrentAccount(accountNumber,accountName, balance){
 
+    fun widraws(){
+
+        var count = 0
+
+
+    }
 
 }
 
